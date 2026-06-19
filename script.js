@@ -32,7 +32,7 @@ function setButtonsDisabled(state) {
 async function checkAuth() {
     try {
         const response = await fetch(
-            "http://localhost:4000/user/getCurrentUser",
+            "https://login-and-logout-backend.onrender.com/user/getCurrentUser",
             {
                 credentials: "include"
             }
@@ -88,7 +88,7 @@ loginForm.addEventListener("submit", async (e) => {
         };
 
         const response = await fetch(
-            "http://localhost:4000/user/login",
+            "https://login-and-logout-backend.onrender.com/user/login",
             {
                 method: "POST",
                 credentials: "include",
@@ -121,7 +121,7 @@ logoutBtn.addEventListener("click", async () => {
     setButtonsDisabled(true);
     try {
         const response = await fetch(
-            "http://localhost:4000/user/logOut",
+            "https://login-and-logout-backend.onrender.com/user/logOut",
             {
                 method: "POST",
                 credentials: "include"
@@ -200,7 +200,7 @@ async function signupform() {
         }
 
         const response = await fetch(
-            "http://localhost:4000/user/register",
+            "https://login-and-logout-backend.onrender.com/user/register",
             {
                 method: "POST",
                 body: formData
